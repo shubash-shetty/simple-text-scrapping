@@ -15,7 +15,7 @@ def get_driver():
   driver = webdriver.Chrome(options=options)
   driver.get("https://automated.pythonanywhere.com/")
 
-  
+
   return driver
 
 def clean_text(text):
