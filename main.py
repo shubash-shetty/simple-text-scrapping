@@ -11,13 +11,18 @@ def get_driver():
   options.add_argument("disable-blink-features=AutomationControlled")
 
   driver = webdriver.Chrome(options=options)
-  driver.get("https://en.wikipedia.org/wiki/Subhas_Chandra_Bose")
+  driver.get("https://automated.pythonanywhere.com/")
+
+  
   return driver
 
 def main():
   driver = get_driver()
-  element = driver.find_element(by="xpath", value = "/html/body/div[2]/div/div[3]/main/div[3]/div[3]/div[1]/p[5]")
+  element = driver.find_element(by="xpath", value = "/html/body/div[1]/div/h1[1]")
+
   return element.text
 
 print(main())
 print("\nThank you")
+
+
